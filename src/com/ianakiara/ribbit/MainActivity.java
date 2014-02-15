@@ -325,14 +325,17 @@ public class MainActivity extends FragmentActivity implements
 			// Logout
 			ParseUser.logOut();
 			navigateToLogin();
+			break;
 		case R.id.action_edit_friends:
 			Intent intent = new Intent(this, EditFriendsActivity.class);
 			startActivity(intent);
+			break;
 		case R.id.action_camera:
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setItems(R.array.camera_choices, mDialogListener);
 			AlertDialog dialog = builder.create();
 			builder.show();
+			break;
 		}
 		return super.onOptionsItemSelected(item);
 	}

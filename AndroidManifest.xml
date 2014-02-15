@@ -56,6 +56,15 @@
         <activity
             android:name="com.ianakiara.ribbit.RecipientsActivity"
             android:label="@string/title_activity_recipients"
+            android:parentActivityName="com.ianakiara.ribbit.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ianakiara.ribbit.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.ianakiara.ribbit.ViewImageActivity"
+            android:label="@string/title_activity_view_image"
             android:parentActivityName="com.ianakiara.ribbit.MainActivity" android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
