@@ -277,8 +277,8 @@ public class MainActivity extends FragmentActivity implements
 				sendBroadcast(mediaScanIntent);
 			}
 			
-			Intent recipientIntent = new Intent(this, RecipientsActivity.class);
-			recipientIntent.setData(mMediaUri);
+			Intent recipientsIntent = new Intent(this, RecipientsActivity.class);
+			recipientsIntent.setData(mMediaUri);
 			
 			String fileType;
 			if (requestCode == PICK_PHOTO_REQUEST || requestCode == TAKE_PHOTO_REQUEST){
@@ -287,7 +287,8 @@ public class MainActivity extends FragmentActivity implements
 			else{
 				fileType = ParseConstants.TYPE_VIDEO;
 			}
-			startActivity(recipientIntent);
+			recipientsIntent.putExtra(ParseConstants.KEY_FILE_TYPE, fileType);
+			startActivity(recipientsIntent);
 		}
 		else if (resultCode != RESULT_CANCELED) {
 			Toast.makeText(this, R.string.general_error, Toast.LENGTH_LONG).show();
