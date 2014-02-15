@@ -159,7 +159,7 @@ public class RecipientsActivity extends ListActivity {
 	}
 	
 	protected ParseObject createMessage() {
-		ParseObject message = new ParseObject(ParseConstants.classMessages);
+		ParseObject message = new ParseObject(ParseConstants.CLASS_MESSAGES);
 		message.put(ParseConstants.KEY_SENDER_ID, ParseUser.getCurrentUser().getObjectId());
 		message.put(ParseConstants.KEY_SENDER_NAME, ParseUser.getCurrentUser().getUsername());
 		message.put(ParseConstants.KEY_RECIPIENTS_IDS, getRecipientIds());
